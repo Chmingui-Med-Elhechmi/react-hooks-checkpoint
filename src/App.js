@@ -41,7 +41,7 @@ function App() {
     {
       title: "TRANSPORTER 2",
       description:
-        "Le film est basé sur le récit du naufrage du RMS Titanic et met en vedette Leonardo DiCaprio et Kate Winslet.",
+        "Jason Statham revient dans le rôle de Frank Martin, un « transporteur » professionnel qui livre des colis sans poser de questions.",
       posterURL: "https://c8.alamy.com/compfr/bpnpyk/katie-nauta-jason-statham-poster-transporteur-2-2005-bpnpyk.jpg",
       rating: 2,
     }
