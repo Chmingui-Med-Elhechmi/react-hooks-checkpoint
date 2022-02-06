@@ -36,8 +36,15 @@ function App() {
       description:
         "Le film est basé sur le récit du naufrage du RMS Titanic et met en vedette Leonardo DiCaprio et Kate Winslet.",
       posterURL: "https://d3fa68hw0m2vcc.cloudfront.net/601/238712112.jpeg",
-      rating: 2,
+      rating: 3,
     },
+    {
+      title: "TRANSPORTER 2",
+      description:
+        "Le film est basé sur le récit du naufrage du RMS Titanic et met en vedette Leonardo DiCaprio et Kate Winslet.",
+      posterURL: "https://c8.alamy.com/compfr/bpnpyk/katie-nauta-jason-statham-poster-transporteur-2-2005-bpnpyk.jpg",
+      rating: 2,
+    }
   ]);
   const search = (text) => {
     setKeyWord(text);
@@ -47,21 +54,26 @@ function App() {
     setNewRate(rate);
   };
 
-  const addMovie=(movie)=>{
-    setMovies(movies.concat(movie))
-  }
+  const addMovie = (movie) => {
+    setMovies(movies.concat(movie));
+  };
 
   return (
     <div className="App">
-      <Search search={search} setRate={setRate} newRate={newRate} />
-      <MovieList
-        movies={movies.filter(
-          (el) =>
-            el.rating >= newRate &&
-            el.title.toLowerCase().includes(KeyWord.toLowerCase().trim())
-        )}
-        addMovie={addMovie}
-      />
+      <div>
+        <Search search={search} setRate={setRate} newRate={newRate} />
+      </div>
+      <div className="movies">
+        <MovieList
+          addMovie={addMovie}
+          movies={movies.filter(
+            (el) =>
+              el.rating >= newRate &&
+              el.title.toLowerCase().includes(KeyWord.toLowerCase().trim())
+          )}
+          
+        />
+      </div>
     </div>
   );
 }

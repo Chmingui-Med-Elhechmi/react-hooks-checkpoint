@@ -15,12 +15,14 @@ const Search = ({ search, setRate, newRate }) => {
             className="ser"
           />
         </div>
-        <StarRatingComponent
-          name="rate1"
-          starCount={5}
-          value={newRate}
-          onStarClick={onStarClick}
-        />
+        <div className="stars">
+          <StarRatingComponent
+            name="rate1"
+            starCount={5}
+            value={newRate}
+            onStarClick={onStarClick}
+          />
+        </div>
       </div>
     </div>
   );
